@@ -1,0 +1,38 @@
+html, body { padding:0; margin:0; min-height:100%;}
+.jumbotron.main { 
+	background-image: url("https://scontent.fatl1-2.fna.fbcdn.net/v/t1.0-9/26239144_397393790683157_2153482995526170533_n.jpg?oh=cda6d8494378794f4fc37f526120da68&oe=5AE8F196");
+    background-size: 100% 100%;
+    background-position: center;
+    height:300px;
+    margin-bottom: 0;
+}
+
+#footer{
+	background-color: #cf2612;
+	position:relative;
+	bottom: 0;
+	left: 0;
+	margin-top: 16em;
+  	min-width:100% ;
+  	margin-bottom: 0;
+}
+.fa-facebook-official{
+	margin: 0;
+}
+.fa-heart-o{
+	margin-top: 10px;
+	margin-right: 5px;
+	padding: 2px;
+}
+.container{
+	margin-top: 5em;
+}
+#mainSection{
+	margin-bottom: 0px;
+}
+.ui.card:last-child {
+    margin-bottom: 3em;
+}
+#saveCar{
+	display: inline;
+}

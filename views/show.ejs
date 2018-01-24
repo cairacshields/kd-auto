@@ -1,0 +1,99 @@
+<% include partials/header %>
+
+<div class="container">
+
+	<div class="col-md-9">
+		<img class="ui fluid image" src="<%=car.image%>">
+	</div>
+	<div class="col-md-3 rightSide">
+		<div class="row">
+			<div class="ui card">
+			  <div class="content">
+			    <div class="header"><h1> <%=car.name%></h1></div>
+			  </div>
+			  <div class="content">
+			    <h4 class="ui sub header">Vehicle Information</h4>
+			    <div class="ui small feed">
+			      <div class="event">
+			        <div class="content">
+			          <div class="summary">
+			            <strong>Year: </strong> <%=car.year%>
+			          </div>
+			        </div>
+			      </div>
+			      <div class="event">
+			        <div class="content">
+			          <div class="summary">
+			            <strong>Style: </strong> <%=car.style%>
+			          </div>
+			        </div>
+			      </div>
+			      <div class="event">
+			        <div class="content">
+			          <div class="summary">
+			            <strong>Color: </strong> <%=car.color%>
+			          </div>
+			        </div>
+			      </div>
+			      <div class="event">
+			        <div class="content">
+			          <div class="summary">
+			            <strong>Price: </strong>$<%=car.price%>
+			          </div>
+			        </div>
+			      </div>
+			      <div class="event">
+			        <div class="content">
+			          <div class="summary">
+			            <strong>Mileage: </strong> <%=car.mileage%>
+			          </div>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+			</div>  
+		</div>
+		<div class="row">
+
+			<div class="segment">
+				<h2> Send Inquiry </h2>
+				<form action="/car/<%=car._id%>/contact" method="POST" class="ui form">
+				  <div class="field">
+				    <label>E-mail</label>
+				    <input name="car[email]" type="email" placeholder="Enter your email">
+				  </div>
+				  <div class="field">
+				    <label>Vehicle Inquiry</label>
+				    <input name="car[vehicle]" type="text" value="<%=car.name%>">
+				  </div>
+				  
+				  <button id="messageSent" class="ui submit button">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+<div class="ui basic modal">
+  <div class="ui icon header">
+    <i class="archive icon"></i>
+    Archive Old Messages
+  </div>
+  <div class="content">
+    <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
+  </div>
+  <div class="actions">
+    <div class="ui red basic cancel inverted button">
+      <i class="remove icon"></i>
+      No
+    </div>
+    <div class="ui green ok inverted button">
+      <i class="checkmark icon"></i>
+      Yes
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+<% include partials/footer %>

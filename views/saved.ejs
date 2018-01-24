@@ -1,0 +1,43 @@
+<% include partials/header %>
+<section id="mainSection">
+<div class="container">
+
+	<div class="col-md-3">
+
+
+
+	</div>
+
+	 <div class="col-md-9">
+		 	<h1> Your Saved Vehicles </h1>
+
+			 <% user.cars.forEach(function(car){ %>
+			 	<div class="ui divided items">
+				  <div class="item">
+				    <div class="image">
+				      <img src="<%=car.image%>" onError="this.onerror=null;this.src='https://buythomas.com/wp-content/themes/thomas-child/assets/images/plchldr255.png';"">
+				    </div>
+				    <div class="content">
+				      <a class="header"><%=car.name%></a>
+				      <div class="meta">
+				        <span>Description</span>
+				      </div>
+				      <div class="description">
+				        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
+				      </div>
+				      <div class="extra">
+				      <a href="/car/<%=car._id%>">
+				        Additional Details
+				      </a>
+				      </div>
+				      
+				    </div>
+				  </div>
+			 <% });%>
+
+		 </div>
+
+
+</div>
+</section>
+<% include partials/footer %>
